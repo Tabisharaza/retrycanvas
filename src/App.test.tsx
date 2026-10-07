@@ -23,6 +23,9 @@ describe('comparison form and results', () => {
     expect(within(noJitter).getByText('850 ms')).toBeTruthy()
     expect(within(noJitter).getByText('5.1 s')).toBeTruthy()
     expect(screen.getByRole('status').textContent).toBe('Default comparison ready.')
+    const laneLabels = document.querySelectorAll('.timeline .lane-label')
+    expect([...laneLabels].map(label => label.textContent)).toEqual(['1', '2', '3'])
+    laneLabels.forEach(label => expect(label.hasAttribute('transform')).toBe(false))
   })
   it('rejects blank, fractional, and out-of-bounds values while keeping the previous result', async () => {
     const user = userEvent.setup()

@@ -12,6 +12,12 @@ test('renders real charts, valid default counts, and no horizontal overflow', as
   await expect(page.getByText('Synthetic retry-schedule simulation.', { exact: false })).toBeVisible()
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
   expect(errors).toEqual([])
+  const laneLabelsFit = await page.locator('.timeline .lane-label').evaluateAll(labels => labels.every(label => {
+    const bounds = label.getBoundingClientRect()
+    const svgBounds = label.closest('svg')!.getBoundingClientRect()
+    return bounds.left >= svgBounds.left && bounds.right <= svgBounds.right
+  }))
+  expect(laneLabelsFit).toBe(true)
   await testInfo.attach('default-comparison', { body: await page.screenshot({ fullPage: true }), contentType: 'image/png' })
 })
 

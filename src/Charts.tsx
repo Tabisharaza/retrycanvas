@@ -34,7 +34,7 @@ export function Timeline({ simulation }: { simulation: Simulation }) {
         return `M${px.toFixed(2)},${py.toFixed(2)}v${Math.max(1.3, 48 / shownClients).toFixed(2)}`
       }).join(' ')
       return <g key={result.strategy}>
-        <text x="14" y={y + 32} className="axis-text" transform={`rotate(-90 14 ${y + 32})`} textAnchor="middle">{lane + 1}</text>
+        <text x="14" y={y + 32} className="axis-text lane-label" textAnchor="middle">{lane + 1}</text>
         <path d={path} fill="none" stroke={COLORS[result.strategy]} strokeWidth="2" strokeLinecap="round" opacity="0.85" />
         <line x1={LEFT} x2={WIDTH - RIGHT} y1={y + laneHeight - 13} y2={y + laneHeight - 13} className="lane-line" />
       </g>
