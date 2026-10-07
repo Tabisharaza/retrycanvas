@@ -14,7 +14,8 @@ export the synthetic events as CSV.
 Built for engineering explanations, design discussions, and small experiments.
 All requests are simulated. The app never sends traffic to a target service.
 
-[Quick start](#quick-start) · [The model](docs/MODEL.md) ·
+[Live demo](https://tabisharaza.github.io/retrycanvas/) · [Quick start](#quick-start) ·
+[The model](docs/MODEL.md) ·
 [Contribute](CONTRIBUTING.md) · [Roadmap](docs/ROADMAP.md)
 
 ## What you can explore
@@ -26,6 +27,21 @@ All requests are simulated. The app never sends traffic to a target service.
 - **A compact local app** with no account, API key, backend, or built-in telemetry
 
 The hero above is an original illustration, not a screenshot or benchmark.
+
+## Screenshots
+
+Real browser captures of the default scenario from the
+[passing browser test run](https://github.com/Tabisharaza/retrycanvas/actions/runs/37581903864).
+The desktop and Pixel 7 emulation captures show the same synthetic inputs.
+
+![Desktop view of RetryCanvas showing the controls, retry timelines, and three histograms](docs/screenshots/desktop.png)
+
+<details>
+<summary>View the mobile screenshot</summary>
+
+<img src="docs/screenshots/mobile.png" alt="Full-page mobile view of RetryCanvas with stacked controls and charts" width="393">
+
+</details>
 
 ## Quick start
 

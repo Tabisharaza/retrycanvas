@@ -1,8 +1,8 @@
 # Small, reviewable next steps
 
-These are contribution proposals, not filed issues, assigned work, or promised
-release dates. Check the current source and open discussions before starting;
-keep the first PR focused.
+These are contribution proposals, not assigned work or promised release dates.
+The histogram-table work is tracked in [issue #1](https://github.com/Tabisharaza/retrycanvas/issues/1).
+Check the current source and open discussions before starting; keep the first PR focused.
 
 ## 1. Accessible histogram data table
 
